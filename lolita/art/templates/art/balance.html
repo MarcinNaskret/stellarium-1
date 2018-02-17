@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:font-weight="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>[Stellarium]pl</title>
+
+
+
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="argonauta" content="@">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="static/css/small-business.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    function laduj(){
+        $("#razem").load(" #razem")
+        $("#balance_div").load(" #balance_div")
+    }
+setInterval(laduj,10*1000);
+});
+</script>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">[Stellarium]pl</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://stellarterm.com/">StellarTerm</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.stellar.org/">StellarNetwork</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://stellarchain.io">StellerChain</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+
+
+            <div class="container">
+<div  id="razem">
+
+
+      <div class="my-4"></div><!-- spaceseparator-->
+
+      <!-- CENA XLM/USD -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title " id="cena_usd">{{price_usd}}$</h2>
+              <p class="card-text">XLM/USD</p>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- KONIEC CENA XLM/USD -->
+
+
+
+
+      <!-- CENA XLM/EUR -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title"  id="cena_eur">{{cena_eur}}€</h2>
+              <p class="card-text">XLM/EUR</p>
+            </div>
+
+          </div>
+        </div>
+
+                <!-- KONIEC CENA XLM/USD -->
+
+        <!-- /.col-md-4 -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title"  id="cena_yen"><font color="#001f3f">{{cena_yen}}¥</font></h2>
+              <p class="card-text">XLM/CNY</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- /.col-md-4 -->
+
+      </div><!-- 3xrow-->
+
+
+
+        <!-- CENA 24 VOLUME -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title " id="24volume">{{24h_volume}}$</h2>
+              <p class="card-text">24h volume</p>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- KONIEC 24 VOLUME -->
+
+
+
+
+      <!-- MARKET CAPR -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title"  id="market_cap">{{market_cap}}$</h2>
+              <p class="card-text">Market cap</p>
+            </div>
+
+          </div>
+        </div>
+
+          <!-- KONIEC MARKET CAPR -->
+
+                <!-- KONIEC CENA XLM/USD -->
+
+        <!-- COINMARKETCAP RANKING -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title"  id="rank"><font color="#001f3f">{{rank}}</font></h2>
+              <p class="card-text">Coinmarket ranking</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- KONIEC COINMARKETCAP RANKING -->
+
+      </div>
+
+
+
+        <!-- CENA 24 VOLUME -->
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title " id="change1h"><font color="{{change_1h}}">{{x1h_change}}%</font></h2>
+              <p class="card-text">Last hour percent price change</p>
+            </div>
+
+          </div>
+        </div>
+
+      <!-- KONIEC 24 VOLUME -->
+
+
+
+
+      <!-- MARKET CAPR -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+                <h2 class="card-title"  id="change24h"><font color="{{change_24h}}">{{x24h_change}}%</font></h2>
+              <p class="card-text">24 hour percent price change</p>
+            </div>
+
+          </div>
+        </div>
+
+          <!-- KONIEC MARKET CAPR -->
+
+                <!-- KONIEC CENA XLM/USD -->
+
+        <!-- COINMARKETCAP RANKING -->
+        <div class="col-md-4 mb-4">
+          <div class="card h-100">
+            <div class="card-body card-footer test">
+              <h2 class="card-title"  id="change7d"><font color="{{change_7d}}">{{x7d_change}}%</font></h2>
+              <p class="card-text">7 day percent price change</p>
+            </div>
+
+          </div>
+        </div>
+        <!-- KONIEC COINMARKETCAP RANKING -->
+
+      </div>
+
+
+</div><!--#KONIEC RAZEM-->
+
+
+<!-- Call to Action Well -->
+      <div class="card text-white bg-secondary mb-4 text-center">
+        <div class="card h-250 card-body card-footer">
+            <div id="balance_div"><font color="#78C0A8" size="32">{{ adress }}</font><font color="#F0A830" size="38" font-weight="bold"> {{ balance }}</font></div>
+        </div>
+      </div>
+
+
+<!-- TEST AREA TEST AREA -->
+
+
+
+
+
+ <!-- Call to Action Well -->
+      <div class="text-white bg-secondary my-4 text-center">
+        <div class="card 2-100">
+          <p class="text-white m-0"><strong><font color="black">Donations address: {{ donations }}</font> </strong></p>
+        </div>
+      </div>
+
+
+
+
+
+<!-- KONIEC TEST AREA TEST AREA KONIE -->
+
+</div><!--#container-->
+
+
+
+
+
+  </body>
+
+</html>
+
+

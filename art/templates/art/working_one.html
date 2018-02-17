@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    function laduj(){
+        $("#balance").load(" #balance")
+    }
+setInterval(laduj,10*1000);
+});
+</script>
+
+
+</head>
+<body>
+<div id="balance">
+Adress :{{ adress }}<br>
+Balance {{ balance }}<br>
+Symbol : {{ symbol }}<br>
+Price USD : {{ price_usd }}<br>
+Price BTC : {{ price_btc }}<br>
+Rank :{{ rank }}<br>
+
+</div>
+
+
+
+
+
+
+
+
+
+

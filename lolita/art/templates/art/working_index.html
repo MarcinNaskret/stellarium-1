@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    function laduj(){
+        $("#balance").load(" #balance")
+    }
+setInterval(laduj,10*1000);
+});
+</script>
+
+
+</head>
+<body>
+
+Baa babab balance dla <div id="adress">{{ adress }}</div>
+Baa babab balance dla <div id="symbol">{{ symbol }}</div>
+Baa babab balance dla <div id="balance">{{ balance }}</div>
+<br>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <input id="adress_form" type="text" name="adress_form">
+    <input type="submit" value="ok">
+
+</form>
+</body>
+</html>
